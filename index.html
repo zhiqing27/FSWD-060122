@@ -1,0 +1,259 @@
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #header {
+        background-image: url(bake1.jpg);
+        background-size: cover;
+        align-items: center;
+        width: 100%;
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: fixed;
+        background: #f2f2f2;
+        padding: 1% 1%;
+    }
+
+    #header-img {
+        max-width: 6%;
+        height: auto;
+    }
+
+    #nav-bar {
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #nav-bar .nav-link {
+        text-decoration: none;
+        margin: 0 2%;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #6aaed9;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    #nav-bar .nav-link:focus {
+        text-decoration: underline;
+    }
+
+    #main-title {
+        width: 30%;
+        position: absolute;
+        top: 40%;
+        margin-left: 7%;
+        color: #6aaed9;
+        text-align: center;
+        background: #f2f2f2ad;
+        border-radius: 20px;
+        padding: 4%;
+        font-size: 2.4em;
+    }
+
+    /*Header section finished*/
+
+    #products {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: 1%;
+        justify-content: space-between;
+    }
+
+    .section-title {
+        color: #f2f2f2;
+        font-size: 2em;
+        margin-bottom: 5%;
+        padding-left: 10%;
+        width: 45%;
+    }
+
+    #description p {
+        padding-left: 10%;
+        color: #f2f2f2;
+        font-size: 1em;
+        width: 80%;
+    }
+
+    #product-catalogue {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+
+    #product-catalogue .catal-img {
+        max-width: 28%;
+        height: auto;
+        margin: 2%;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    #product-catalogue img:hover {
+        transform: scale(1.2);
+    }
+
+    /*End of product catalogue*/
+
+    #video-promo {  
+        width: 100%;
+        display: flex;
+        /* flex-direction: row-reverse; */
+        align-items: center;
+        margin-bottom: 5%;
+        margin-top: 2%;
+    }
+
+    .video-title {
+        color: #6aaed9 !important;
+    }
+
+    #video {
+        max-width: 100%;
+        margin-right: 5%;
+        margin-left: 20%;
+    }
+
+
+
+    /*Media queries*/
+    @media screen and (max-width: 991px) {
+        #header {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 60vw;
+        }
+
+        #nav-bar .nav-link {
+            font-size: 1.5vw;
+        }
+
+        #main-title {
+            width: 40%;
+            top: 10%;
+        }
+
+        #description {
+            height: 69vw;
+        }
+
+        #product-catalogue .catal-img {
+            max-width: 42%;
+            margin-left: 6%;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        #nav-bar .nav-link {
+            font-size: 2vw;
+        }
+
+        #main-title {
+            width: 80%;
+            top: 15%;
+        }
+
+        #products {
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+            width: 98%;
+            margin-top: 5%;
+        }
+
+        #description {
+            height: auto;
+            width: 80%;
+            margin-left: 4%;
+            padding: 1% 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #product-catalogue {
+            flex-direction: column;
+        }
+
+        #product-catalogue .catal-img {
+            max-width: 80%;
+        }
+
+        #product-catalogue img:hover {
+            transform: scale(1.1);
+        }
+
+        /* #video-promo {
+            flex-direction: column;
+        } */
+
+        #video {
+            margin-left: 0;
+            margin-right: 10%;
+            max-width: 100%;
+        }
+
+        #form #name,
+        #form #email {
+            height: 6vw;
+        }
+
+        #form #submit {
+            height: 6vw;
+            width: 40%;
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 478px) {
+        #nav-bar .nav-link {
+            font-size: 2vw;
+        }
+
+        #main-title {
+            width: 60%;
+            top: 5%;
+        }
+
+        #main-title {
+            font-size: 1.5em;
+        }
+    }
+</style>
+<title>Baking</title>
+<header id="header">
+    <h1 id="main-title">Start Your Baking Journey</h1>
+</header>
+
+<body>
+    <section id="products">
+        <div id="product-catalogue">
+            <img class="catal-img" src="bake.jpg" />
+            <img class="catal-img" src="bake2.jpg" />
+            <img class="catal-img" src="cake3.jpg" />
+        </div>
+    </section>
+    <section id="video-promo">
+        <h2 class="section-title video-title">Featuring Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2rOcCug6heU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+</body>
